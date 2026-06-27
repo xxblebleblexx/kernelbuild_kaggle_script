@@ -1,4 +1,4 @@
-# run this line
+# run this line in kaggle.com notebook
 ```
 !git clone -b main --depth=1  https://github.com/xxblebleblexx/kernelbuild_kaggle_script.git
 ```

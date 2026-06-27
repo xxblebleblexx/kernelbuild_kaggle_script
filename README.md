@@ -1,7 +1,10 @@
-# Upload the file then run this line on google colab
+# run this line
 ```
-!sh setup_colab.sh
+!git clone -b main --depth=1  https://github.com/xxblebleblexx/kernelbuild_kaggle_script.git
 ```
 ```
-!sh kernel_build.sh
+!sh kernelbuild_kaggle_script/setup_colab.sh
+```
+```
+!sh kernelbuild_kaggle_script/kernel_build.sh
 ```

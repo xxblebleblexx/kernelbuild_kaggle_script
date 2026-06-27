@@ -11,7 +11,7 @@ susfs=y # only 4.19 y/n or u can change another susfs patch
 export PATH=/kaggle/working/kernelbuild_kaggle_script/clang/bin:$PATH
 cd $fast_path
 git clone -b $branch_kernel --depth=1 $kernelsource;wait
-cd $fast_path/$kernelname
+cd $kernelname
 
 #KSU DRIVER
 if [ "$susfs" = "n" ]; then

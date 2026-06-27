@@ -1,6 +1,6 @@
 #apt setup
+alias apt='apt-get'
 apt update -y
-apt upgrade -y
 apt install -y \
 git \
 llvm \

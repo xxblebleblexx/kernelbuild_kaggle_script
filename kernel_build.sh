@@ -4,12 +4,11 @@ kernelname=$(basename "$kernelsource" .git) # No need to edit
 branch_kernel=mb-mglru # Must be edited
 defconfig_path=arch/arm64/configs/gale_defconfig # Must be edited
 defconfig=gale_defconfig # Must be edited
-fast_path=/kaggle/working/kernelbuild_kaggle_script/kernelbuild_kaggle_script # This where kernelsource saved
+fast_path=kernelbuild_kaggle_script/kernelbuild_kaggle_script # This where kernelsource saved
 hooks=manual #only manual hook/kprobes hook, must be edited
-clang=$fast_path/clang/bin
 susfs=y # only 4.19 y/n or u can change another susfs patch
 
-export PATH=$clang:$PATH
+export PATH=/kaggle/working/kernelbuild_kaggle_script/clang/bin:$PATH
 cd $fast_path
 git clone -b $branch_kernel --depth=1 $kernelsource;wait
 cd $fast_path/$kernelname

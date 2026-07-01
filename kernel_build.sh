@@ -37,6 +37,8 @@ if [ "$hooks" = "manual" ]; then
 echo "CONFIG_KSU_MANUAL_HOOK=y" >> $defconfig_path
 wget https://raw.githubusercontent.com/xxblebleblexx/manual_hook_fix/refs/heads/main/manualhook_1.6_fixed.patch;wait;patch -p1 < manualhook_1.6_fixed.patch
 fi
+#Nomount
+curl -LSs "https://raw.githubusercontent.com/xxblebleblexx/nomount-installer/refs/heads/installer/nomount.sh" | bash -s 4.19
 
 if [ "$susfs" = "y" ]; then
 wget https://raw.githubusercontent.com/xxblebleblexx/susfs_patch/refs/heads/mainline/susfix-419.patch;wait;patch -p1 < susfix-419.patch
